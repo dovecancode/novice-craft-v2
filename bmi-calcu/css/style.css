@@ -1,0 +1,15 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+input[type='checkbox'] {
+  display: none;
+}
