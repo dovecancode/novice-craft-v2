@@ -12,18 +12,29 @@
       <div class="bmi-header">
         <h1>BMI Calculator</h1>
       </div>
-      <div class="bmi-gender">
-        <div class="female">
-          <input type="checkbox" name="female" id="female" class="agree-term" />
-          <label for="female" class="gender">
-            <i class="fas fa-female"></i>
-          </label>
+      <div class="container">
+        <div class="bmi-gender">
+          <div class="female">
+            <input type="radio" name="gender" id="female" class="gender-select" />
+            <label for="female" class="gender">
+              <i class="fas fa-female"></i>
+              <p>female</p>
+            </label>
+          </div>
+          <div class="male">
+            <input type="radio" name="gender" id="male" class="gender-select" />
+            <label for="male" class="gender">
+              <i class="fas fa-male"></i>
+              <p>male</p>
+            </label>
+          </div>
         </div>
-        <div class="male">
-          <input type="checkbox" name="male" id="male" class="agree-term" />
-          <label for="male" class="gender">
-            <i class="fas fa-male"></i>
-          </label>
+        <div class="bmi-height">
+          <p>height</p>
+          <div class="range-wrapper">
+            <span id="heightVal" class="heightVal">0</span>
+          </div>
+          <input type="range" class="range-input" value="0" min="0" />
         </div>
       </div>
     </div>

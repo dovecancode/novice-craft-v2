@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 * {
+  margin: 0;
   box-sizing: inherit;
 }
 
@@ -8,8 +11,142 @@ html {
 }
 
 body {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
 }
 
-input[type='checkbox'] {
+.container {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+input[type='radio'] {
   display: none;
+}
+
+[type='radio']:checked + .gender {
+  background: #e76f51;
+}
+
+.bmi {
+  background: #264653;
+  width: 40.7rem;
+  border-radius: 1.6rem;
+}
+
+.bmi-header {
+  background: #2a9d8f;
+  text-align: center;
+  padding-block: 1.6rem;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}
+
+/* Section Gender */
+
+.bmi-gender {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bmi-gender .gender {
+  background: #f4a261;
+  width: 13rem;
+  padding: 1.6rem 0;
+  display: block;
+  border-radius: 1rem;
+}
+
+.bmi-gender .gender p {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  margin-top: 1.6rem;
+}
+
+.bmi-gender .gender i {
+  font-size: 6rem;
+}
+
+.bmi-gender > * {
+  text-align: center;
+}
+
+/* Section Height */
+
+.bmi-height {
+  background: #f4a261;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  text-align: center;
+  position: relative;
+  margin-block: 1.6rem;
+  width: 100%;
+}
+
+.bmi-height p {
+  text-transform: capitalize;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+}
+
+.bmi-height .range-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.bmi-height .heightVal {
+  position: absolute;
+  font-size: 1.6rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: #2a9d8f;
+  color: #fff;
+  font-weight: bold;
+  line-height: 3.5rem;
+  top: -4.5rem;
+  left: 0;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.bmi-height .heightVal::after {
+  position: absolute;
+  content: '';
+  height: 3.5rem;
+  width: 3.5rem;
+  background: #2a9d8f;
+  top: 0.2rem;
+  left: 0;
+  transform: rotate(45deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: -1;
+}
+
+.bmi-height .range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  height: 6px;
+  border-radius: 0.0625rem;
+  background: #fff;
+}
+
+.bmi-height .range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  background: #2a9d8f;
+  border-radius: 50%;
 }
