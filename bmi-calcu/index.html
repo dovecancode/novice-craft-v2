@@ -32,27 +32,27 @@
         <div class="bmi-height">
           <p><span id="heightVal">0</span>cm Height</p>
           <div class="range-container">
-            <input type="range" id="range-input" class="range-input" value="0" max="300" />
+            <input type="range" id="height" class="range-input" value="0" max="300" />
             <div id="progress" class="progess"></div>
           </div>
         </div>
         <div class="bmi-num flex-layout">
           <div class="weight option">
             <p>weight</p>
-            <input type="text" />
+            <input id="weight" type="text" />
           </div>
           <div class="age option">
             <p>age</p>
-            <input type="text" />
+            <input id="age" type="text" />
           </div>
         </div>
         <div class="bmi-button flex-layout">
-          <button type="button">Calculate</button>
+          <button id="btnCalculate" type="button">Calculate</button>
         </div>
       </div>
       <!-- end container -->
-      <div class="bmi-result style">
-        <h1>BMI Calculator</h1>
+      <div class="bmi-result">
+        <p>Result Here</p>
       </div>
     </div>
     <script src="script.js"></script>
