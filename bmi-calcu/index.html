@@ -9,11 +9,11 @@
   </head>
   <body>
     <div class="bmi wrapper">
-      <div class="bmi-header">
+      <div class="bmi-header style">
         <h1>BMI Calculator</h1>
       </div>
       <div class="container">
-        <div class="bmi-gender">
+        <div class="bmi-gender flex-layout">
           <div class="female">
             <input type="radio" name="gender" id="female" class="gender-select" />
             <label for="female" class="gender">
@@ -36,6 +36,23 @@
             <div id="progress" class="progess"></div>
           </div>
         </div>
+        <div class="bmi-num flex-layout">
+          <div class="weight option">
+            <p>weight</p>
+            <input type="text" />
+          </div>
+          <div class="age option">
+            <p>age</p>
+            <input type="text" />
+          </div>
+        </div>
+        <div class="bmi-button flex-layout">
+          <button type="button">Calculate</button>
+        </div>
+      </div>
+      <!-- end container -->
+      <div class="bmi-result style">
+        <h1>BMI Calculator</h1>
       </div>
     </div>
     <script src="script.js"></script>

@@ -25,6 +25,11 @@ body {
   padding: 2rem 0;
 }
 
+.flex-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 input[type='radio'] {
   display: none;
 }
@@ -39,7 +44,7 @@ input[type='radio'] {
   border-radius: 1.6rem;
 }
 
-.bmi-header {
+.style {
   background: #2a9d8f;
   text-align: center;
   padding-block: 1.6rem;
@@ -48,12 +53,6 @@ input[type='radio'] {
 }
 
 /* Section Gender */
-
-.bmi-gender {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .bmi-gender .gender {
   background: #f4a261;
@@ -126,7 +125,68 @@ input[type='radio'] {
   background: #2a9d8f;
   border-radius: 0.3rem;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 0;
   pointer-events: none;
+}
+
+/* Section Weight and Age */
+
+.bmi-num .option {
+  background: #f4a261;
+  width: 13rem;
+  padding-block: 2rem;
+  border-radius: 1rem;
+}
+
+.bmi-num .option > p {
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.bmi-num .option input {
+  width: 50%;
+  margin: 0 3rem;
+  text-align: center;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: border 0.3s ease;
+}
+
+.bmi-num .option input:focus {
+  border-bottom: 1px solid #264653;
+}
+
+.bmi-button {
+  width: 100%;
+  margin-block: 1.6rem;
+  background: #2a9d8f;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+button {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  transform: scale(0.9);
+  font-size: 1.6rem;
+}
+
+.bmi-button:active {
+  transform: translateY(6px);
+  transform: scale(0.9);
 }
