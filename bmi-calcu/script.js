@@ -48,17 +48,17 @@ const renderResult = (bmi, gender) => {
   let result
 
   if (gender === 'female') {
-    gender = 'lady'
+    gender = "ma'am"
   } else {
-    gender = 'boy'
+    gender = 'sir'
   }
 
   if (bmi >= 25) {
     result = `You are overweight ${gender}, you're BMI is ${bmi}, you better do some griding`
   } else if (bmi >= 18) {
-    result = `You are  good ${gender}, you're BMI is ${bmi}, you are in good shape, keep it up`
+    result = `You're BMI is ${bmi}, you are in good shape ${gender}, keep it up`
   } else {
-    result = `You are Underweight ${gender}, you're BMI is ${bmi}, you better eat more`
+    result = `You are underweight ${gender}, you're BMI is ${bmi}, you better eat more`
   }
 
   return result
