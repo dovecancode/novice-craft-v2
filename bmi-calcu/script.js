@@ -24,7 +24,6 @@ const onRangeInput = () => {
 const onClickCalculate = () => {
   let bmi
   let weightVal = +weight.value
-  let ageVal = +age.value
 
   if (gender === undefined && weight.value === '' && height === undefined && age.value === '') {
     alert('Please choose gender, define a height, weight and age')
@@ -54,11 +53,11 @@ const renderResult = (bmi, gender) => {
   }
 
   if (bmi >= 25) {
-    result = `You are overweight ${gender}, you're BMI is ${bmi}, you better do some griding`
+    result = `You are overweight ${gender}, you're BMI is ${bmi}, you better do some griding!!!`
   } else if (bmi >= 18) {
-    result = `You're BMI is ${bmi}, you are in good shape ${gender}, keep it up`
+    result = `You're BMI is ${bmi}, you are in good shape ${gender}, keep it up!`
   } else {
-    result = `You are underweight ${gender}, you're BMI is ${bmi}, you better eat more`
+    result = `You are underweight ${gender}, you're BMI is ${bmi}, you better eat more!!!`
   }
 
   return result
