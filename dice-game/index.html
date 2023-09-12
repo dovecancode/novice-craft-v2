@@ -48,6 +48,11 @@
         color: aqua;
       }
 
+      .btns {
+        display: flex;
+        gap: 1rem;
+      }
+
       .btn {
         background: #ffc83d;
         border: 0;
@@ -82,7 +87,10 @@
           <img src="img/dice-1.png" alt="" />
         </div>
       </div>
-      <button class="btn" id="diceBtn">Press To Roll</button>
+      <div class="btns">
+        <button class="btn" id="diceBtn">Press To Roll</button>
+        <button class="btn" disabled id="reset">PLAY AGAIN</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

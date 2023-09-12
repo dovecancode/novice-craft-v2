@@ -15,8 +15,9 @@ let maxScore = 10
 
 // button element
 const diceBtn = document.getElementById('diceBtn')
+const resetBtn = document.getElementById('reset')
 
-function onClickDiceBtn() {
+function onClickRoll() {
   let player1 = Math.floor(Math.random() * 6) + 1
   let player2 = Math.floor(Math.random() * 6) + 1
 
@@ -36,6 +37,7 @@ function onClickDiceBtn() {
     if (p1Score === maxScore) {
       headEl.textContent = 'Game over player 1 Wins 🤘'
       diceBtn.disabled = true
+      reset.disabled = false
     }
   } else if (player2 > player1) {
     headEl.textContent = 'Player 2 Wins'
@@ -46,8 +48,20 @@ function onClickDiceBtn() {
     if (p2Score === maxScore) {
       headEl.textContent = 'Game over player 2 Wins 🤘'
       diceBtn.disabled = true
+      reset.disabled = false
     }
   }
 }
 
-diceBtn.onclick = onClickDiceBtn
+function onClickResetGame() {
+  headEl.textContent = 'Lets play another round'
+  p1Score = 0
+  p2Score = 0
+  reset.disabled = true
+  diceBtn.disabled = false
+  p1ScoreEl.textContent = p1Score
+  p2ScoreEl.textContent = p2Score
+}
+
+diceBtn.onclick = onClickRoll
+resetBtn.onclick = onClickResetGame
