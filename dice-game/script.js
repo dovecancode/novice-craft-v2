@@ -23,7 +23,7 @@ function onClickDiceBtn() {
   p2ImgEl.src = 'img/dice-' + player2 + '.png'
 
   if (player1 === player2) {
-    headEl.textContent = 'Draw'
+    headEl.textContent = 'This is time is Draw'
   } else if (player1 > player2) {
     headEl.textContent = 'Player 1 Wins'
     p1Score += 1
