@@ -19,7 +19,6 @@ const diceBtn = document.getElementById('diceBtn')
 function onClickDiceBtn() {
   let player1 = Math.floor(Math.random() * 6) + 1
   let player2 = Math.floor(Math.random() * 6) + 1
-  console.log('player1: ' + player1, 'player2 ' + player2)
 
   p1ImgEl.setAttribute('src', 'img/dice-' + player1 + '.png')
   p2ImgEl.setAttribute('src', 'img/dice-' + player2 + '.png')
