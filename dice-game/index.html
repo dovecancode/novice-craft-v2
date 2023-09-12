@@ -9,6 +9,11 @@
       * {
         box-sizing: border-box;
       }
+
+      body {
+        background: #202124;
+        color: #fff;
+      }
       img {
         width: 100%;
         display: block;
@@ -17,7 +22,7 @@
       .players {
         display: flex;
         gap: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 18px;
       }
       .players .player .header {
         text-align: center;
@@ -42,6 +47,20 @@
       .p2 .score {
         color: aqua;
       }
+
+      .btn {
+        background: #ffc83d;
+        border: 0;
+        outline: 0;
+        padding: 7px 14px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn:active {
+        transform: scale(0.98);
+        transform: translateY(4px);
+      }
     </style>
   </head>
   <body>
@@ -63,7 +82,7 @@
           <img src="img/dice-1.png" alt="" />
         </div>
       </div>
-      <button id="diceBtn">Press To Roll</button>
+      <button class="btn" id="diceBtn">Press To Roll</button>
     </div>
     <script src="script.js"></script>
   </body>
