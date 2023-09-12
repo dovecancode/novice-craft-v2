@@ -54,7 +54,7 @@ function onClickRoll() {
 }
 
 function onClickPlayAgain() {
-  headEl.innerHTML = 'Ready to play another round? <br>  Hit that shitty  roll button once again'
+  headEl.innerHTML = 'Ready to play another round?<br>Hit that shitty  roll button once again'
   p1Score = 0
   p2Score = 0
   playAgainBtn.disabled = true
