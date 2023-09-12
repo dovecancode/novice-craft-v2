@@ -19,25 +19,31 @@ const diceBtn = document.getElementById('diceBtn')
 function onClickDiceBtn() {
   let player1 = Math.floor(Math.random() * 6) + 1
   let player2 = Math.floor(Math.random() * 6) + 1
-  p1ImgEl.src = 'img/dice-' + player1 + '.png'
-  p2ImgEl.src = 'img/dice-' + player2 + '.png'
+  console.log('player1: ' + player1, 'player2 ' + player2)
+
+  p1ImgEl.setAttribute('src', 'img/dice-' + player1 + '.png')
+  p2ImgEl.setAttribute('src', 'img/dice-' + player2 + '.png')
 
   if (player1 === player2) {
     headEl.textContent = 'Draw this time'
   } else if (player1 > player2) {
     headEl.textContent = 'Player 1 Wins'
     p1Score += 1
-    p1ScoreEl.textContent = p1Score
+    p1ScoreEl.textContent = p1Score + ' 🤘'
+    // remove the winner flag from player 2
+    p2ScoreEl.textContent = p2Score
     if (p1Score === maxScore) {
-      headEl.textContent = 'Game over player 1 Wins'
+      headEl.textContent = 'Game over player 1 Wins 🤘'
       diceBtn.disabled = true
     }
   } else if (player2 > player1) {
     headEl.textContent = 'Player 2 Wins'
     p2Score += 1
-    p2ScoreEl.textContent = p2Score
+    p2ScoreEl.textContent = p2Score + ' 🤘'
+    // remove the winner flag from player 2
+    p1ScoreEl.textContent = p1Score
     if (p2Score === maxScore) {
-      headEl.textContent = 'Game over player 2 Wins'
+      headEl.textContent = 'Game over player 2 Wins 🤘'
       diceBtn.disabled = true
     }
   }

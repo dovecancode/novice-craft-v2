@@ -6,6 +6,9 @@
     <title>Dice Game</title>
 
     <style>
+      * {
+        box-sizing: border-box;
+      }
       img {
         width: 100%;
         display: block;
@@ -18,14 +21,19 @@
       }
       .players .player .header {
         text-align: center;
+        height: 42px;
+      }
+
+      .players .player .header p {
+        margin-bottom: 0;
+      }
+
+      .players .player .header .score {
+        font-size: 20px;
       }
 
       .players .player {
         max-width: 10rem;
-      }
-      .p1 .score,
-      .p2 .score {
-        font-weight: bold;
       }
 
       .p1 .score {
@@ -38,10 +46,7 @@
   </head>
   <body>
     <h1>Welcome lets play a Dice Game</h1>
-    <p>
-      The first player to reach the score of 10 will be <br />
-      the winner and the button "Press To Roll" will be disabled
-    </p>
+    <p>The first to reach the score of 10 will be the winner 🤘</p>
 
     <div class="container">
       <div class="players">
