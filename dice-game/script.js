@@ -25,6 +25,8 @@ function onClickDiceBtn() {
 
   if (player1 === player2) {
     headEl.textContent = 'Draw this time'
+    p2ScoreEl.textContent = p2Score
+    p1ScoreEl.textContent = p1Score
   } else if (player1 > player2) {
     headEl.textContent = 'Player 1 Wins'
     p1Score += 1
